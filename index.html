@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SPF Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>SPF Generator</h1>
+            <div class="input-section">
+                <label for="domains">Root Domain</label>
+                <textarea id="domains" rows="4" placeholder="Enter Root Domain Twice, each in new line..." required></textarea>
+            </div>
+            <div class="input-section">
+                <label for="ips">IPs</label>
+                <textarea id="ips" rows="2" placeholder="Enter IPs..."></textarea>
+            </div>
+            <div class="input-section">
+                <label for="include">Included Domains</label>
+                <textarea id="include" rows="4" placeholder="Enter include domains..."></textarea>
+            </div>
+            <button onclick="generateSPF()">Generate SPF</button>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>SPF Output</h2>
+                <div id="output" class="output"></div>
+                <button id="copyButton" onclick="copyOutput()">Copy to Clipboard</button>
+                <button id="closeButton" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
