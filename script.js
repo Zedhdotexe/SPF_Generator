@@ -89,3 +89,23 @@ function closePopup() {
     popupOutput.textContent = "";
   }, 300);
 }
+
+// Disable Ctrl + U
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && (event.key === 'u' || event.keyCode === 85)) {
+    event.preventDefault();
+  }
+});
+
+// Disable Ctrl + Shift + I
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.shiftKey && (event.key === 'i' || event.keyCode === 73)) {
+    event.preventDefault();
+  }
+});
+
+// Disable right-click
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});
+
