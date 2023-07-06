@@ -1,3 +1,9 @@
+/*
+ * SPF GENERATOR  v1.0.0 (https://main.d256xrl063nzcl.amplifyapp.com/)
+ * Copyright 2023-2024 The WMN6 Authors
+ * Created By @ZahiriMoaad
+ */
+
 function generateSPF() {
   var domainsInput = document.getElementById("domains").value.trim();
   var ipsInput = document.getElementById("ips").value.trim();
